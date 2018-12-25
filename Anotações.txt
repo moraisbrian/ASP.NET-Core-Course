@@ -1,0 +1,2 @@
+//adicionando dependencias
+dotnet add package Microsoft.AspNetCore.App --version 2.2.0
