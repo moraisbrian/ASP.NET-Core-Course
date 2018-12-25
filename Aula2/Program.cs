@@ -7,6 +7,8 @@ namespace aula2
 {
     class Program
     {
+        //dotnet add package Microsoft.AspNetCore.App --version 2.2.0
+        //dotnet watch run
         static void Main(string[] args)
         {
             var host = new WebHostBuilder()
@@ -25,7 +27,7 @@ namespace aula2
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.Use(async(context, next)=>{
+            app.Use(async(context, next) => {
                 await context.Response.WriteAsync("Trabalhando com classe StartUp");
             });
         }
