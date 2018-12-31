@@ -1,0 +1,10 @@
+ConfigureServices
+
+//Toda vez que o "AddTransient" é chamado cria uma nova instancia da classe
+services.AddTransient<IPeopleRepository>(repository => new PeopleRepository("http://sqlserver"));
+
+//Toda vez que serviço é necessario um novo serviço, é criado uma nova instancia por requisição
+services.AddSocoped()
+
+//Toda vez que o seviço for requisitado é utilizado a mesma instancia
+services.AddSingleton()
