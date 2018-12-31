@@ -35,7 +35,7 @@ namespace injecaodependencia
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            //Middleware para injeção de dependencia
+            //Configuração para injeção de dependencia, mais detalhado no arquivo "notes.txt"
             services.AddTransient<IPeopleRepository>(Repository => new PeopleRepository("http://sqlserver"));
         }
 
