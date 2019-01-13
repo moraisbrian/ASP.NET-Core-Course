@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Save";
+}
+
+<h1>Save</h1>
+
+<form action="/Product/Save" method="post">
+    Id:
+    <input type="text" name="Id" />
+    <br />
+    Nome: 
+    <input type="text" name="Name" />
+    <br />
+    Preço:
+    <input type="text" name="Price" />
+    <br />
+    <button type="submit">Salvar</button>
+</form>
+
+@if(ViewBag.Validacao != null)
+{
+    <p>@ViewBag.Validacao</p>
+}
