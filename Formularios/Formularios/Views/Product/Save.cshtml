@@ -1,19 +1,35 @@
-﻿
+﻿@model Formularios.Models.Product
 @{
     ViewData["Title"] = "Save";
 }
 
 <h1>Save</h1>
-
+<!--
 <form action="/Product/Save" method="post">
     Id:
     <input type="text" name="Id" />
     <br />
-    Nome: 
+    Nome:
     <input type="text" name="Name" />
     <br />
     Preço:
     <input type="text" name="Price" />
+    <br />
+    <button type="submit">Salvar</button>
+</form>
+-->
+<form asp-controller="Product" asp-action="Save" method="post">
+    Id:
+    <input asp-for="Id" />
+    <span asp-validation-for="Id"></span>
+    <br />
+    Nome:
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    Preço:
+    <input asp-for="Price" />
+    <span asp-validation-for="Price"></span>
     <br />
     <button type="submit">Salvar</button>
 </form>

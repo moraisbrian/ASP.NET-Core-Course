@@ -15,6 +15,7 @@ namespace Formularios.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public IActionResult Save(Product product)
         {

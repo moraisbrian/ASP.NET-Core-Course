@@ -8,12 +8,12 @@ namespace Formularios.Models
 {
     public class Product
     {
-        [Required]
+        [Required(ErrorMessage = "Campo obrigatório")]
         public int Id { get; set; }
-        [Required]
-        [MinLength(3)]
+        [Required(ErrorMessage = "Campo obrigatório")]
+        [MinLength(3, ErrorMessage = "Valor maior que 3 caracteres")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo obrigatório")]
         [Range(1, int.MaxValue)]
         public int Price { get; set; }
     }
