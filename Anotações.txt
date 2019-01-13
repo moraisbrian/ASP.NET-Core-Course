@@ -1,2 +1,7 @@
 //adicionando dependencias
 dotnet add package Microsoft.AspNetCore.App --version 2.2.0
+
+//adicionando EFCore via nuget
+Install-Package Microsoft.EntityFrameworkCore -Version 2.2.1
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 2.2.1
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 2.2.1
