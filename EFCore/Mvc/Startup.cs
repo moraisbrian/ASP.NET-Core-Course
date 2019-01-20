@@ -63,7 +63,19 @@ namespace Mvc
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}")
+
+                    .MapRoute(
+                    name: "salvarcategoria",
+                    template: "salvarcategoria",
+                    defaults: new { controller = "Categoria", Action = "Salvar" })
+
+                    .MapRoute(
+                    name: "consultarcategoria",
+                    template: "consultarcategoria",
+                    defaults: new { controller = "Categoria", Action = "Consultar" });
+                
+                
             });
         }
     }
