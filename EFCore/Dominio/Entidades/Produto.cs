@@ -11,5 +11,6 @@ namespace Dominio.Entidades
         //virtual para Lazing Loading
         public virtual Categoria Categoria { get; set; }
         public int CategoriaId { get; set; }
+        public bool Ativo { get; set; }
     }
 }

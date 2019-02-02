@@ -20,6 +20,16 @@ namespace Dados
             optionsBuilder.UseLazyLoadingProxies();
         }
 
+        //Fluent API
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Produto>().ToTable("Produto");
+            modelBuilder.Entity<Produto>().Property(x => x.Nome).HasMaxLength(50);
+            modelBuilder.Entity<Produto>().Property(x => x.Nome).IsRequired();
+            modelBuilder.Entity<Categoria>().ToTable("Categoria");
+            modelBuilder.Entity<Categoria>().Property(x => x.Nome).IsRequired();
+        }
+
         public DbSet<Categoria> Categorias { get; set; }
 
         public DbSet<Produto> Produtos { get; set; }

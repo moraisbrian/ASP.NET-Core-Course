@@ -3,14 +3,16 @@ using Dados;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Dados.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190202214436_Ativo_PermiteEstoque")]
+    partial class Ativo_PermiteEstoque
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,14 +26,13 @@ namespace Dados.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Nome")
-                        .IsRequired();
+                    b.Property<string>("Nome");
 
                     b.Property<bool>("PermiteEstoque");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categoria");
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Produto", b =>
@@ -44,15 +45,13 @@ namespace Dados.Migrations
 
                     b.Property<int>("CategoriaId");
 
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(50);
+                    b.Property<string>("Nome");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CategoriaId");
 
-                    b.ToTable("Produto");
+                    b.ToTable("Produtos");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Produto", b =>
