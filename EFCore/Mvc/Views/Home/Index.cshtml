@@ -7,9 +7,12 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<div>
-    <a asp-route="salvarcategoria">Salvar categoria</a>
-    <br />
-    <a asp-route="consultarcategoria">Consultar categoria</a>
-</div>
+<ul style="float: left; margin-right: 30px;">
+    <li><a asp-route="salvarcategoria">Salvar categoria</a></li>
+    <li><a asp-route="consultarcategoria">Consultar categoria</a></li>    
+</ul>
+<ul>
+    <li><a asp-action="Salvar" asp-controller="Produto">Salvar Produtos</a></li>
+    <li><a asp-action="Consultar" asp-controller="Produto">Consultar Produto</a></li>
+</ul>
 
