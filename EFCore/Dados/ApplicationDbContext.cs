@@ -28,10 +28,15 @@ namespace Dados
             modelBuilder.Entity<Produto>().Property(x => x.Nome).IsRequired();
             modelBuilder.Entity<Categoria>().ToTable("Categoria");
             modelBuilder.Entity<Categoria>().Property(x => x.Nome).IsRequired();
+            modelBuilder.Entity<Pedido>().ToTable("Pedido");
+            modelBuilder.Entity<Pedido>().HasKey(x => x.Numero);
+            modelBuilder.Entity<Pedido>().Property(x => x.Data).HasDefaultValueSql("getdate()");
         }
 
         public DbSet<Categoria> Categorias { get; set; }
 
         public DbSet<Produto> Produtos { get; set; }
+
+        public DbSet<Pedido> Pedidos { get; set; }
     }
 }
