@@ -8,3 +8,13 @@ Install-Package Microsoft.EntityFrameworkCore.Tools -Version 2.2.1
 
 //Lazy Loading | faz o include de todas as tabelas em uma consulta
 Install-Package Microsoft.EntityFrameworkCore.Proxies
+
+//ClientSide | npm ou yarn
+npm install -g yarn
+yarn init
+yarn install jquery		 	//install libs
+yarn install bootstrap	 	//install libs
+yarn install gulp-concat 	//bundles
+yarn install gulp-cssmin 	//comprimir arquivos
+yarn install gulp
+yarn install gulp-uncss     //Remove libs inutilizadas
