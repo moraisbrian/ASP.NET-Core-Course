@@ -18,3 +18,4 @@ yarn install gulp-concat 	//bundles
 yarn install gulp-cssmin 	//comprimir arquivos
 yarn install gulp
 yarn install gulp-uncss     //Remove libs inutilizadas
+yarn install browser-sync
